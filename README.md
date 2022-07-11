@@ -5,7 +5,7 @@
 * Clone the repo.\
 * Run `Yarn`.\
 * Run `Yarn Start`.\
-* For users page go to link `http://localhost:3000/`
+* For users page go to link `http://localhost:3000/react-users`
 
 ## Prod Link
 
