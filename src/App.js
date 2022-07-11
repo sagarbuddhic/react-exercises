@@ -11,8 +11,8 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path="users" element={<Users />} />
-          <Route index element={<Home />} />
+          <Route path="react-users/manage-users" element={<Users />} />
+          <Route path="react-users" element={<Home />} />
         </Routes>
       </BrowserRouter>
     </div>
