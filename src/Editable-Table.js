@@ -1,5 +1,10 @@
 import { Form, Input, Select, Popconfirm, Table, Typography } from "antd";
+
+/** @jsxRuntime classic */
+/** @jsx jsx */
+import { jsx } from "@emotion/react";
 import React, { useEffect, useState } from "react";
+import * as styles from "./Edit.style";
 const { Option } = Select;
 
 // const originData = [
@@ -256,6 +261,7 @@ const Editabletable = () => {
         }}
         loading={!Boolean(data)}
         bordered
+        css={styles.table}
         dataSource={data}
         columns={mergedColumns}
         rowClassName="editable-row"
