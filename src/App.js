@@ -5,6 +5,7 @@ import Users from "./Users";
 import { jsx } from "@emotion/react";
 import * as styles from "./App.style";
 import ErrorBoundary from "./Error-boundary";
+import Indicate from "./Indicate";
 
 function uploadFile(event) {
   let file = event.target.files[0];
@@ -34,6 +35,7 @@ function App() {
             onChange={uploadFile}
           />
         </div>
+        <Indicate text="test" />
       </div>
     </ErrorBoundary>
   );
