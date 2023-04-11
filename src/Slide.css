@@ -1,0 +1,7 @@
+.animals-list {
+    -webkit-transition: max-height 1s;
+    -moz-transition: max-height 1s;
+    -ms-transition: max-height 1s; 
+    -o-transition: max-height 1s;
+    transition: max-height 1s;
+  }

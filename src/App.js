@@ -4,8 +4,11 @@ import Users from "./Users";
 /** @jsx jsx */
 import { jsx } from "@emotion/react";
 import * as styles from "./App.style";
+import MorphSVG from "./MorphSVG";
 import ErrorBoundary from "./Error-boundary";
 import Indicate from "./Indicate";
+import AutoCompleteText from "./AutoComplete";
+import Slide from "./Slide";
 
 function uploadFile(event) {
   let file = event.target.files[0];
@@ -35,7 +38,10 @@ function App() {
             onChange={uploadFile}
           />
         </div>
+        <MorphSVG />
+        <Slide />
         <Indicate text="test" />
+        <AutoCompleteText />
       </div>
     </ErrorBoundary>
   );
