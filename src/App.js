@@ -9,39 +9,44 @@ import ErrorBoundary from "./Error-boundary";
 import Indicate from "./Indicate";
 import AutoCompleteText from "./AutoComplete";
 import Slide from "./Slide";
-
-function uploadFile(event) {
-  let file = event.target.files[0];
-  console.log(file);
-
-  if (file) {
-    let data = new FormData();
-    console.log(data);
-    data.append("file", file);
-    // axios.post('/files', data)...
-  }
-}
+import { SyntaxHighlight } from "./syntaxHighlighter/SyntaxHighlighter";
+import Columns from "./Graphs/Columns";
+import Area from "./Graphs/Area";
+import TableChart from "./Graphs/TableChart";
+import BreadCrumbsWrapper from "./BreadCrumbButton/BreadCrumbsWrapper";
+import DateRange from "./DateRangePicker/index";
+import DropDownIcon from "./DropDown/DropDownIcon";
+import ZoomAnimation from "./ZoomAnimation/index";
+import HeatmapGraph from "./Heatmap";
+import FileUpload from "./UploadFile/FileUpload";
 
 function App() {
   return (
     <ErrorBoundary>
-      <div className="App">
-        <Users />
-        <div>
-          <label for="file-input">
-            <img src="/logo512.png" />
-          </label>
-          <input
-            id="file-input"
-            type="file"
-            name="myFile"
-            onChange={uploadFile}
-          />
-        </div>
+      <div
+        className="App"
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          gap: "10px",
+          paddingBottom: "20px",
+        }}
+      >
+        <ZoomAnimation />
+        <FileUpload />
         <MorphSVG />
         <Slide />
         <Indicate text="test" />
         <AutoCompleteText />
+        <SyntaxHighlight></SyntaxHighlight>
+        <Columns />
+        <Area />
+        <TableChart />
+        <BreadCrumbsWrapper />
+        <DropDownIcon />
+        {/* <DateRange /> */}
+        {/* <HeatmapGraph /> */}
+        {/* <Users /> */}
       </div>
     </ErrorBoundary>
   );

@@ -7,11 +7,12 @@ import EditableTable from "./Editable-Table";
 /** @jsx jsx */
 import { jsx } from "@emotion/react";
 import * as styles from "./Users.style";
+import * as stylesW from "./wrapperStyle.style";
 
 function Users() {
   const { Header, Footer, Content } = Layout;
   return (
-    <div className="App">
+    <div css={stylesW.wrapper} className="App">
       <Layout>
         <Header style={{ height: "100px", backgroundColor: "grey" }}>
           <span css={styles.headerText}>Manage Users</span>
