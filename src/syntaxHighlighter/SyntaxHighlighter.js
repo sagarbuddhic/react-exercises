@@ -3,7 +3,15 @@ import { dracula } from "react-syntax-highlighter/dist/esm/styles/hljs";
 /** @jsxRuntime classic */
 /** @jsx jsx */
 import { jsx } from "@emotion/react";
+import { format } from "sql-formatter";
 import * as styleW from "../wrapperStyle.style";
+
+let formatterVals = {
+  snowflake: "snowflake",
+  sql: "sql",
+  oracle: "plsql",
+  postgresql: "postgresql",
+};
 
 const SyntaxHighlight = (props) => {
   return (
@@ -11,7 +19,9 @@ const SyntaxHighlight = (props) => {
       <h3>Syntax Highlighter</h3>
       <pre style={{ fontSize: "16px" }}>
         <SyntaxHighlighter
-          children={"select * from test"}
+          children={format("select * from test where ta=true", {
+            language: formatterVals["sql"],
+          })}
           language="sql"
           style={dracula}
         />
