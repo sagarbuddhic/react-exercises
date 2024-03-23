@@ -19,6 +19,9 @@ import DropDownIcon from "./DropDown/DropDownIcon";
 import ZoomAnimation from "./ZoomAnimation/index";
 import HeatmapGraph from "./Heatmap";
 import FileUpload from "./UploadFile/FileUpload";
+import StackedColumn from "./Graphs/StackedColumn";
+import TreeViewTable from "./TreeTable";
+import data from "./TreeTable/data.json";
 
 function App() {
   return (
@@ -29,7 +32,7 @@ function App() {
           display: "flex",
           flexDirection: "column",
           gap: "10px",
-          paddingBottom: "20px",
+          paddingBottom: "40px",
         }}
       >
         <ZoomAnimation />
@@ -44,9 +47,15 @@ function App() {
         <TableChart />
         <BreadCrumbsWrapper />
         <DropDownIcon />
+        <StackedColumn />
         {/* <DateRange /> */}
         {/* <HeatmapGraph /> */}
         {/* <Users /> */}
+        <TreeViewTable
+          nodes={data.nodes}
+          expandedkeys={data.expandedkeys}
+          columns={data.columns}
+        />
       </div>
     </ErrorBoundary>
   );

@@ -1,0 +1,37 @@
+
+.tree-view-wrapper .p-treetable .p-treetable-tbody > tr > td:first-child {
+    background: #ffffff;
+  }
+  
+  .tree-view-wrapper .p-treetable .p-treetable-tbody > tr > td {
+    padding: 0.4rem 1rem;
+  }
+  
+  .tree-view-wrapper .p-treetable-wrapper {
+    max-height: 60vh;
+    max-width: 1000px;
+  }
+  
+  .tree-view-wrapper .p-treetable-table {
+    table-layout: auto !important;
+  }
+  
+  .tree-view-wrapper .p-treetable-thead {
+    position: sticky;
+    top: 0px;
+    z-index: 10;
+  }
+
+  .p-treetable .p-treetable-thead > tr > th:first-child {
+    position: sticky;
+    left: 0;
+    z-index: 2;
+    background: #f2f5fa;
+  }
+
+  .p-treetable .p-treetable-tbody > tr > td:first-child {
+    position: sticky;
+    left: 0;
+    z-index: 2;
+    max-width: 50px;
+  }

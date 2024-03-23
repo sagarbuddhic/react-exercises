@@ -1,0 +1,75 @@
+{
+  "nodes": [
+    {
+      "key": "0",
+      "data": {
+        "Type": "Type1",
+        "Val1": "test values one",
+        "Val2": "test values two",
+        "Val3": "test values three",
+        "Val4": "test values",
+        "Val5": "test values",
+        "Val6": "test values",
+        "Val7": "test values",
+        "Val8": "test values",
+        "Val9": "test values",
+        "Val10": "test values",
+        "Val11": "test values",
+        "Val12": "test values",
+        "Val13": "test values",
+        "Val14": "test values",
+        "Val15": "test values",
+        "Val16": "test values"
+      },
+      "children": [
+        {
+          "key": "0-0",
+          "parentKey": "0",
+          "data": {
+            "Type": "Type child",
+            "Val1": "test values child",
+            "Val2": "val child",
+            "Val3": "val",
+            "Val4": "val",
+            "Val5": "val",
+            "Val6": "val",
+            "Val7": "val",
+            "Val8": "val",
+            "Val9": "test values",
+            "Val10": "val",
+            "Val11": "val",
+            "Val12": "val",
+            "Val13": "val",
+            "Val14": "val",
+            "Val15": "val",
+            "Val16": "val"
+          },
+          "children": []
+        }
+      ]
+    }
+  ],
+  "expandedKeys": {
+    "0": true,
+    "0-0": true
+  },
+  "columns": [
+    "Type",
+    "Val1",
+    "Val2",
+    "Val3",
+    "Val4",
+    "Val5",
+    "Val6",
+    "Val7",
+    "Val8",
+    "Val9",
+    "Val10",
+    "Val11",
+    "Val12",
+    "Val13",
+    "Val14",
+    "Val15",
+    "Val16"
+  ]
+}
