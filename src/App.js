@@ -17,11 +17,12 @@ import BreadCrumbsWrapper from "./BreadCrumbButton/BreadCrumbsWrapper";
 import DateRange from "./DateRangePicker/index";
 import DropDownIcon from "./DropDown/DropDownIcon";
 import ZoomAnimation from "./ZoomAnimation/index";
-import HeatmapGraph from "./Heatmap";
 import FileUpload from "./UploadFile/FileUpload";
 import StackedColumn from "./Graphs/StackedColumn";
 import TreeViewTable from "./TreeTable";
 import data from "./TreeTable/data.json";
+import StructuredBlocks from "./StructuredBlocks";
+import HeatmapMonthly from "./HeatmapMonthly";
 
 function App() {
   return (
@@ -56,6 +57,8 @@ function App() {
           expandedkeys={data.expandedkeys}
           columns={data.columns}
         />
+        <StructuredBlocks />
+        <HeatmapMonthly />
       </div>
     </ErrorBoundary>
   );

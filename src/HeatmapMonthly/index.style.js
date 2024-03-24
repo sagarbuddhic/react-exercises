@@ -15,12 +15,4 @@ const dropdown = (hover) => css`
   transition: max-height 1s;
 `;
 
-const preWrapper = css`
-  white-space: pre-wrap;
-  // font-family: ui-monospace;
-  margin: 0;
-  padding: 0;
-  background-color: transparent;
-`;
-
-export { dropdown, preWrapper };
+export { dropdown };

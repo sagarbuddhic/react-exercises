@@ -1,44 +1,22 @@
 import React, { useState } from "react";
-import { TiFlowSwitch } from "react-icons/ti";
 import CalendarHeatmap from "react-calendar-heatmap";
-// import ReactTooltip from "react-tooltip";
 import Tooltip from "@material-ui/core/Tooltip";
 import IconButton from "@material-ui/core/IconButton";
-import useOnClickOutside from "use-onclickoutside";
 import { IoMdClose } from "react-icons/io";
-
-import "./HeatmapGraph.css";
+import ReactTooltip from "react-tooltip";
 
 /** @jsxImportSource @emotion/react */
-import * as styles from "./Heatmap.style.js";
+import * as styles from "./index.style.js";
 
-const today = new Date();
-
-function HeatmapGraph(props) {
-  const { data } = props;
+const HeatmapMonthly = (props) => {
   const [coords, setCoords] = useState({ left: 0, top: 0 });
+  const refHeatmap = React.useRef(null);
   const [clickedVals, setClickedVals] = useState({
     coords: { left: 0, top: 0 },
     date: "",
     open: false,
   });
   const [arr, setArr] = useState([]);
-  const refHeatmap = React.useRef(null);
-  useOnClickOutside(refHeatmap, () => {
-    let coordsTemp = {
-      coords: clickedVals.coords,
-      date: clickedVals.date,
-      open: false,
-    };
-    setClickedVals(coordsTemp);
-  });
-
-  const randomValues = getRange(200).map((index) => {
-    return {
-      date: shiftDate(today, -index),
-      count: getRandomInt(1, 3),
-    };
-  });
 
   return (
     <div
@@ -51,17 +29,18 @@ function HeatmapGraph(props) {
         padding: "15px",
         maxWidth: "420px",
         minWidth: "350px",
-        height: "250px",
+        height: "350px",
       }}
     >
-      <span style={{ fontSize: "16px", fontWeight: "600" }}>
-        Last Three Month Activities
-      </span>
-      <p></p>
+      <span style={{ fontSize: "16px", fontWeight: "600" }}>Activities</span>
       <CalendarHeatmap
-        startDate={shiftDate(today, -90)}
-        endDate={today}
-        values={data}
+        startDate={new Date("2024-01-01")}
+        endDate={new Date("2024-04-01")}
+        values={[
+          { date: "2024-01-05", count: 1 },
+          { date: "2024-01-22", count: 2 },
+          { date: "2024-02-30", count: 5 },
+        ]}
         classForValue={(value) => {
           if (!value) {
             return "color-empty";
@@ -78,10 +57,6 @@ function HeatmapGraph(props) {
               "data-tip": `No Activity.`,
             };
           } else {
-            let wfText =
-              value.wfCount > 0 ? `${value.wfCount} workflows created` : "";
-            let jobText =
-              value.jobCount > 0 ? ` & ${value.jobCount} jobs created.` : "";
             return {
               "data-tip": `${date}. Total ${value.count} activities.`,
             };
@@ -129,14 +104,11 @@ function HeatmapGraph(props) {
           left: `${clickedVals.coords.left}px`,
           zIndex: "9999",
           maxWidth: "500px",
-          // marginTop: "5px",
         }}
-        data-testid="heatmap-activities-wrapper"
       >
         <div
           style={{
             marginTop: "5px",
-            // padding: "10px",
             borderRadius: "1%",
             backgroundColor: "white",
             display: "flex",
@@ -170,31 +142,15 @@ function HeatmapGraph(props) {
                   }}
                 >
                   <IoMdClose style={{ fontSize: "1.4rem", color: "white" }} />
-                  {/* <span onClick={() => {}} style={{ cursor: "pointer" }}>
-                      
-                    </span> */}
                 </IconButton>
               </div>
             </Tooltip>
           </div>
+          <span>Activities on ${clickedVals.date}</span>
         </div>
       </div>
     </div>
   );
-}
+};
 
-function shiftDate(date, numDays) {
-  const newDate = new Date(date);
-  newDate.setDate(newDate.getDate() + numDays);
-  return newDate;
-}
-
-function getRange(count) {
-  return Array.from({ length: count }, (_, i) => i);
-}
-
-function getRandomInt(min, max) {
-  return Math.floor(Math.random() * (max - min + 1)) + min;
-}
-
-export default HeatmapGraph;
+export default HeatmapMonthly;
