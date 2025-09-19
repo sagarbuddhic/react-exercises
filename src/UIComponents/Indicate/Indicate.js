@@ -4,7 +4,7 @@ import React from "react";
 import { jsx } from "@emotion/react";
 // import ArrowDownwardIcon from "@material-ui/icons/ArrowDownward";
 import "./indicate.css";
-import * as stylesW from "./wrapperStyle.style";
+import * as stylesW from "../../wrapperStyle.style";
 
 const Indicate = (props) => {
   const { text } = props;

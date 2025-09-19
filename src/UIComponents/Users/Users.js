@@ -1,13 +1,13 @@
 import React from "react";
 import "antd/dist/antd.css";
 import { Layout } from "antd";
-import EditableTable from "./Editable-Table";
+import EditableTable from "../Edit/Editable-Table";
 
 /** @jsxRuntime classic */
 /** @jsx jsx */
 import { jsx } from "@emotion/react";
 import * as styles from "./Users.style";
-import * as stylesW from "./wrapperStyle.style";
+import * as stylesW from "../../wrapperStyle.style";
 
 function Users() {
   const { Header, Footer, Content } = Layout;

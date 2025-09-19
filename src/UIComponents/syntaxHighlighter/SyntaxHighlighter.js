@@ -4,7 +4,7 @@ import { dracula } from "react-syntax-highlighter/dist/esm/styles/hljs";
 /** @jsx jsx */
 import { jsx } from "@emotion/react";
 import { format } from "sql-formatter";
-import * as styleW from "../wrapperStyle.style";
+import * as styleW from "../../wrapperStyle.style";
 
 let formatterVals = {
   snowflake: "snowflake",
