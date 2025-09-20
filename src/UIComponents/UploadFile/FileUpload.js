@@ -2,7 +2,7 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/react";
 import React, { useEffect } from "react";
-import * as stylesW from "../../wrapperStyle.style";
+import * as stylesW from "../wrapperStyle.style";
 
 function uploadFile(event) {
   let file = event.target.files[0];

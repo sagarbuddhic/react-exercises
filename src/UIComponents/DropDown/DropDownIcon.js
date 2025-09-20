@@ -3,7 +3,7 @@ import FormControl from "@material-ui/core/FormControl";
 import Select from "@material-ui/core/Select";
 import MenuItem from "@material-ui/core/MenuItem";
 import { makeStyles } from "@material-ui/core/styles";
-import dropDownIcon from "../Assets/drop_down.png";
+import dropDownIcon from "../../Assets/drop_down.png";
 
 const DropDownIcon = (props) => {
   const {

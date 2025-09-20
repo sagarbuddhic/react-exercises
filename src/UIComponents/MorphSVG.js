@@ -3,7 +3,7 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/react";
 import React, { useState, useEffect } from "react";
-import { star, heart, hand, plane, lightning, note } from "./svgPaths";
+import { star, heart, hand, plane, lightning, note } from "../Assets/svgPaths";
 import { motion, useMotionValue, useTransform, animate } from "framer-motion";
 import { useFlubber } from "./flubber";
 import * as stylesW from "./wrapperStyle.style";

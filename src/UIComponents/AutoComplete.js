@@ -4,7 +4,7 @@ import { jsx } from "@emotion/react";
 import { AutoComplete } from "primereact/autocomplete";
 import { useRef } from "react";
 import { useState } from "react";
-import * as stylesW from "../wrapperStyle.style";
+import * as stylesW from "./wrapperStyle.style";
 
 const AutoCompleteText = () => {
   const [selectedAnimal, setSelectedAnimal] = useState("");

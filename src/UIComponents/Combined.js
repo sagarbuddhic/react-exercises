@@ -1,14 +1,13 @@
-import Users from "./Users";
+// import Users from "./Users";
 
 /** @jsxRuntime classic */
 /** @jsx jsx */
 import { jsx } from "@emotion/react";
-import * as styles from "./App.style";
 import MorphSVG from "./MorphSVG";
 import ErrorBoundary from "./Error-boundary";
-import Indicate from "./Indicate";
+import Indicate from "./Indicate/Indicate";
 import AutoCompleteText from "./AutoComplete";
-import Slide from "./Slide";
+import Slide from "./Slide/Slide";
 import { SyntaxHighlight } from "./syntaxHighlighter/SyntaxHighlighter";
 import Columns from "./Graphs/Columns";
 import Area from "./Graphs/Area";
@@ -26,9 +25,8 @@ import HeatmapMonthly from "./HeatmapMonthly";
 import { Provider } from "react-redux";
 import { store } from "./Redux/store";
 import ReduxApp from "./Redux/reduxApp";
-import Sample from "./Sample";
 
-function App() {
+function Combined() {
   return (
     <ErrorBoundary>
       <Provider store={store}>
@@ -66,11 +64,10 @@ function App() {
           <HeatmapMonthly />
           <ReduxApp />
           <span>sample</span>
-          <Sample title="Bikes" optionVals={["yamaha", "hyundai"]} />
         </div>
       </Provider>
     </ErrorBoundary>
   );
 }
 
-export default App;
+export default Combined;

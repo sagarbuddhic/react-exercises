@@ -3,7 +3,7 @@ import React, { useState } from "react";
 /** @jsx jsx */
 import { jsx } from "@emotion/react";
 import "./Slide.css";
-import * as styleW from "../../wrapperStyle.style";
+import * as styleW from "../wrapperStyle.style";
 
 const Slide = () => {
   const [hovered, setHovered] = useState(false);
