@@ -3,6 +3,7 @@ import React from "react";
 import InputButton from "./InputButton";
 import LabelComp from "./LabelComp";
 import SelectInput from "./SelectInput";
+import Counter from "./Counter";
 
 const vals = ["dog", "cat", "mouse"];
 
@@ -13,6 +14,7 @@ function ContextApp() {
       <InputButton />
       <LabelComp />
       <SelectInput animals={vals} />
+      <Counter />
     </div>
   );
 }
