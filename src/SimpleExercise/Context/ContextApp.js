@@ -1,9 +1,8 @@
 // App.js
 import React from "react";
-import InputButton from "./InputButton";
+import InputButton from "../Context/InputButton";
 import LabelComp from "./LabelComp";
-import SelectInput from "./SelectInput";
-import Counter from "./Counter";
+import SelectInput from "../SelectInput";
 
 const vals = ["dog", "cat", "mouse"];
 
@@ -14,7 +13,6 @@ function ContextApp() {
       <InputButton />
       <LabelComp />
       <SelectInput animals={vals} />
-      <Counter />
     </div>
   );
 }
