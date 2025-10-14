@@ -17,8 +17,8 @@ function InputButton() {
       ></input>
       <button
         onClick={() => {
-          setInput("");
           setData(input);
+          setInput("");
         }}
       >
         submit

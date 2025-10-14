@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
+import ContextApp from "../SimpleExercise/Context/ContextApp";
 
 function Sample() {
   return (
     <>
-      <span>test</span>
+      <ContextApp />
     </>
   );
 }

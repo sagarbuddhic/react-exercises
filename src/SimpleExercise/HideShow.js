@@ -7,12 +7,12 @@ export default function HideShow() {
     <>
       <button
         onClick={() => {
-          setVisible(!visible);
+          setVisible((visible) => !visible);
         }}
       >
         {visible ? "Hide" : "Show"}
       </button>
-      {visible && <label>text</label>}
+      {visible && <p>test</p>}
     </>
   );
 }

@@ -1,29 +1,31 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useLayoutEffect, useCallback } from "react";
 
-function useRenderProps() {
+const useMouse = () => {
   const [pos, setPos] = useState({ x: 0, y: 0 });
 
-  useEffect(() => {
-    function handleMove(e) {
-      setPos({ x: e.clientX, y: e.clientY });
-    }
+  const handleMove = useCallback((e) => {
+    setPos({ x: e.clientX, y: e.clientY });
+  }, []);
 
+  useLayoutEffect(() => {
     window.addEventListener("mousemove", handleMove);
+
     return () => window.removeEventListener("mousemove", handleMove);
   }, []);
 
   return pos;
-}
+};
 
-export default function RenderPropsCustom() {
-  const { x, y } = useRenderProps();
+const MousePoints = () => {
+  const pos = useMouse();
 
   return (
-    <div style={{ height: "100vh", background: "#f4f4f4" }}>
-      <h1>Mouse Tracker 🖱️</h1>
+    <>
       <p>
-        X: {x}, Y: {y}
+        x: {pos.x}, y: {pos.y}
       </p>
-    </div>
+    </>
   );
-}
+};
+
+export default MousePoints;

@@ -1,26 +1,30 @@
-import React, { useState } from "react";
+import React, { useState, useCallback } from "react";
 
-export default function SelectInput({ animals }) {
-  const [selAn, setSelAn] = useState("");
+const SelectInput = ({ animals }) => {
+  const [selected, setSelected] = useState("");
+
+  const handleChange = useCallback((e) => {
+    setSelected(e.target.value);
+    console.log("Selected:", e.target.value);
+  }, []);
 
   return (
     <>
-      <select
-        value={selAn}
-        onChange={(e) => {
-          setSelAn(e.target.value);
-        }}
-      >
+      <label htmlFor="animal-select">Choose an animal:</label>
+      <select id="animal-select" value={selected} onChange={handleChange}>
         <option value="" disabled>
-          select an animal
+          Select an Animal
         </option>
-        {animals.map((an, ind) => (
-          <option value={an} key={ind}>
-            {an}
+        {animals.map((animal) => (
+          <option key={animal} value={animal}>
+            {animal}
           </option>
         ))}
       </select>
-      <label>{selAn}</label>
+
+      {selected && <p>You selected: {selected}</p>}
     </>
   );
-}
+};
+
+export default SelectInput;

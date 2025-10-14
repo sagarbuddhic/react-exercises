@@ -1,0 +1,27 @@
+.chess {
+    padding: 10px;
+    display: block;
+    gap: 0;
+  }
+  
+  .row {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .col-black {
+    display: flex;
+    background-color: burlywood;
+    flex-direction: column;
+  }
+  
+  .col-white {
+    display: flex;
+    background-color: white;
+    flex-direction: column;
+  }
+  
+  .box-style {
+    padding: 15px;
+    border: 1px darkorchid solid;
+  }

@@ -11,7 +11,7 @@ export default function InputForm() {
           setText(e.target.value);
         }}
       ></input>
-      <label>{text || "Stranger"}</label>
+      <p>{text || "Stranger"}</p>
     </>
   );
 }
