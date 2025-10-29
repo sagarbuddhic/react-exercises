@@ -1,9 +1,8 @@
 import React from "react";
 import Sample from "./Test/Sample";
-import Counter from "./SimpleExercise/StateReducerPattern";
 
 function App() {
-  return <Counter />;
+  return <Sample />;
 }
 
 export default App;
