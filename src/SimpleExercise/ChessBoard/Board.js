@@ -1,12 +1,10 @@
-import React, { useMemo } from "react";
+import React from "react";
 import Box from "./Box";
 import "./chess.css";
 
 const Chess = (props) => {
   const { count } = props;
-  const numbers = useMemo(() => {
-    return [...Array(count).keys()].map((val) => val + 1);
-  }, [count]);
+  const numbers = Array.from({ length: count }, (_, i) => i + 1);
 
   return (
     <div className="chess">
